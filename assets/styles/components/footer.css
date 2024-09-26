@@ -5,13 +5,7 @@
   padding-bottom: var(--size-xl);
   background-color: var(--color-dark);
   color: var(--color-lightest);
-  div{
-    h3{
-      color: white;
-      padding-bottom: var(--size-m);
-      padding-top: var(--size-m);
-    }
-  }
+  
 
   /* stylelint-disable-next-line no-descending-specificity */
   a {

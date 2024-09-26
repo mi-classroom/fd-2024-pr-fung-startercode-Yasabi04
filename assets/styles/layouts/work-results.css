@@ -1,8 +1,12 @@
 /* Work Result
 ############################################################################ */
 
-  /* Project Styles */
-  /* Project Styles */
+
+.title{
+  color: green;
+}
+
+/* Project Styles */
 .project {
     display: flex;
     flex-direction: column;
@@ -10,12 +14,16 @@
     width: 100%;
     padding: 40px;
     background-color: #f9f9f9;
+    hr{
+      border: 1px solid #3D9B7B;
+    }
+
   }
   
   .project-image {
-    width: 40%;
+    width: 90%;
     height: auto;
-    margin-right: 40px;
+    margin-left: var(--size-m);
   }
   
   .project-details {
@@ -44,6 +52,10 @@
   
   .keywords {
     font-size: 1em;
-    color: #555;
+    color: var(--color-pink);
     margin-top: 10px;
+    span{
+      color: var(--color-dark);
+      font-weight: var(--fw-normal);
+    }
   }

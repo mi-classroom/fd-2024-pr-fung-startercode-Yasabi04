@@ -1,11 +1,13 @@
 details{
   margin-left: calc(var(--size-m) * -0.5);
-  legend{
+  
+  p{
     margin-left: var(--size-m);
   }
   summary {
     display: flex;
     list-style: none;
+    font-weight: var(--fw-medium);
 
     &::before {
       display: inline-block;
@@ -14,6 +16,7 @@ details{
       padding-right: var(--size-xxs);
       color: var(--interaction-color);
       content: "chevron_right";
+      color: var(--color-pink);
       direction: ltr;
       font-family: var(--font-icons);
       font-feature-settings: "liga";
