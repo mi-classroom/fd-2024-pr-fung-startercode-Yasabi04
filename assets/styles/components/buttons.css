@@ -34,3 +34,9 @@
     
   }
 }
+
+#show-more-works{
+  color: white;
+  background-color: var(--color-pink);
+  padding: var(--size-s);
+}
