@@ -1,2 +1,38 @@
 /* Work Overview
 ############################################################################ */
+
+
+.finishedWorks {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--size-m);
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+    border-bottom: solid 3px var(--color-pink);
+  }
+  
+  .work-image {
+    width: 150px; /* Bildbreite */
+    height: 150px;
+    object-fit: cover;
+    margin-right: 15px;
+    border: solid 10px #f8f8f8;
+  }
+  
+  .work-details {
+    padding: 10px;
+  }
+  
+  .finishedWorks h3 {
+    font-size: 1.1em;
+    margin: 0 0 10px 0;
+    color: #333;
+  }
+  
+  .finishedWorks p {
+    font-size: 0.9em;
+    color: #A53E3E; /* Roter Text für den Autor und das Datum */
+  }
+  
