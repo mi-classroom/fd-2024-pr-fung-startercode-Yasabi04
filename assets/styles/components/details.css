@@ -1,6 +1,8 @@
 details{
   margin-left: calc(var(--size-m) * -0.5);
-  
+  legend{
+    margin-left: var(--size-m);
+  }
   summary {
     display: flex;
     list-style: none;
