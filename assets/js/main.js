@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
   slideshow();
 });
 
-
 async function loadFinishedWorks() {
   try {
     const response = await fetch('/fd-2024/works.json');
@@ -98,3 +97,43 @@ async function loadFinishedWorks() {
 // Lade die Daten, wenn die Seite geladen wird
 document.addEventListener('DOMContentLoaded', loadFinishedWorks);
 
+
+
+
+async function loadPictures() {
+  try {
+    const response = await fetch('/fd-2024/works/works/n-pola/04-results/images/metadata.json');
+    console.log(response);
+    const data = await response.json();
+    
+    // Wähle die ul-Liste mit dem Attribut data-js-finished-works
+    const workOverview = document.querySelector('[data-js-pictures]');
+    
+    //erstelle die bilder
+
+    data.forEach(picture => {
+      const listItem = document.createElement('div');
+      listItem.innerHTML = `
+        <a href = "/fd-2024/works/works/n-pola/04-results/${picture.src}" id="clickedPicture">
+          <div class="finishedWorks">
+            <img src="${picture.src || './assets/uploads/nils.jpg'}" alt="Arbeit Bild" class="work-image">
+            <div class="work-details">
+              <h3>${picture.src}</h3>
+            </div>
+          </div>
+          </a>
+      `;
+      workOverview.appendChild(listItem);
+    });
+  } catch (error) {
+    console.error('Fehler beim Laden der abgeschlossenen Fotos:', error);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadPictures);
+
+document.getElementById('clickedPicture').addEventListener('click', function() {
+  /*Bild wird hier in der Höhe des gesamten Bildschirms angezeigt*/
+  document.getElementById('clickedPicture').style.height = "100vh";
+
+});
